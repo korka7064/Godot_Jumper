@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://jeo8456anocy"]
+[gd_scene load_steps=3 format=3 uid="uid://b36nn6t02s0ws"]
 
 [ext_resource type="PackedScene" uid="uid://dj8ra1ehnroa3" path="res://player.tscn" id="1_n4cte"]
 [ext_resource type="PackedScene" uid="uid://c5p21udwkr68p" path="res://platform.tscn" id="2_sh03i"]
@@ -22,3 +22,10 @@ position = Vector2(264, 613)
 
 [node name="platform5" parent="." instance=ExtResource("2_sh03i")]
 position = Vector2(166, 571)
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_right = 322.0
+offset_bottom = 99.0
+text = "left button - left
+right button - right
+z button - jump"
