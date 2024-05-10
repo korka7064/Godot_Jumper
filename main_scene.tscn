@@ -1,31 +1,350 @@
-[gd_scene load_steps=3 format=3 uid="uid://b36nn6t02s0ws"]
+[gd_scene load_steps=4 format=3 uid="uid://b36nn6t02s0ws"]
 
 [ext_resource type="PackedScene" uid="uid://dj8ra1ehnroa3" path="res://player.tscn" id="1_n4cte"]
-[ext_resource type="PackedScene" uid="uid://c5p21udwkr68p" path="res://platform.tscn" id="2_sh03i"]
+[ext_resource type="Texture2D" uid="uid://0rm35fod4r36" path="res://sprites/torch1.1.png" id="3_08ifv"]
+[ext_resource type="PackedScene" uid="uid://c6pg2n2b5w0bl" path="res://brik.tscn" id="3_rb7aj"]
 
 [node name="MainScene" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_n4cte")]
-position = Vector2(38, 470)
-
-[node name="platform" parent="." instance=ExtResource("2_sh03i")]
-position = Vector2(44, 621)
-
-[node name="platform2" parent="." instance=ExtResource("2_sh03i")]
-position = Vector2(283, 502)
-
-[node name="platform3" parent="." instance=ExtResource("2_sh03i")]
-position = Vector2(416, 587)
-
-[node name="platform4" parent="." instance=ExtResource("2_sh03i")]
-position = Vector2(264, 613)
-
-[node name="platform5" parent="." instance=ExtResource("2_sh03i")]
-position = Vector2(166, 571)
+position = Vector2(778, 578)
 
 [node name="TextEdit" type="TextEdit" parent="."]
-offset_right = 322.0
-offset_bottom = 99.0
+offset_right = 305.0
+offset_bottom = 108.0
 text = "left button - left
 right button - right
-z button - jump"
+z button - jump
+ctrl + r - restart"
+
+[node name="brik" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(17, 597)
+
+[node name="brik2" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(17, 631)
+
+[node name="brik3" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(17, 529)
+
+[node name="brik4" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(17, 563)
+
+[node name="brik5" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(17, 495)
+
+[node name="brik6" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(17, 466)
+
+[node name="brik7" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(17, 432)
+
+[node name="brik8" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(17, 398)
+
+[node name="brik9" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(17, 364)
+
+[node name="brik10" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(17, 330)
+
+[node name="brik11" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(17, 296)
+
+[node name="brik12" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(17, 262)
+
+[node name="brik13" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(17, 228)
+
+[node name="brik14" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(17, 194)
+
+[node name="brik15" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(17, 160)
+
+[node name="brik16" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(17, 126)
+
+[node name="brik17" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(51, 631)
+
+[node name="brik18" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(85, 631)
+
+[node name="brik19" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(119, 631)
+
+[node name="brik20" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(153, 631)
+
+[node name="brik21" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(187, 631)
+
+[node name="brik22" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(221, 631)
+
+[node name="brik23" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(255, 631)
+
+[node name="brik24" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(289, 631)
+
+[node name="brik25" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(323, 631)
+
+[node name="brik26" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(357, 631)
+
+[node name="brik27" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(391, 631)
+
+[node name="brik28" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(425, 631)
+
+[node name="brik29" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(459, 631)
+
+[node name="brik30" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(493, 631)
+
+[node name="brik31" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(527, 631)
+
+[node name="brik32" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(561, 631)
+
+[node name="brik33" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(595, 631)
+
+[node name="brik34" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(527, 563)
+
+[node name="brik35" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(697, 563)
+
+[node name="brik36" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(697, 631)
+
+[node name="brik37" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(731, 631)
+
+[node name="brik38" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(765, 631)
+
+[node name="brik39" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(799, 631)
+
+[node name="brik40" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(833, 631)
+
+[node name="brik41" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(867, 631)
+
+[node name="brik42" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(901, 631)
+
+[node name="brik43" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(935, 631)
+
+[node name="brik44" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(969, 631)
+
+[node name="brik45" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(1003, 631)
+
+[node name="brik46" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(1037, 631)
+
+[node name="brik47" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(1071, 631)
+
+[node name="brik48" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(1105, 631)
+
+[node name="brik49" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(1139, 631)
+
+[node name="brik50" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(1139, 17)
+
+[node name="brik51" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(1105, 17)
+
+[node name="brik52" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(1071, 17)
+
+[node name="brik53" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(1037, 17)
+
+[node name="brik54" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(1003, 17)
+
+[node name="brik55" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(969, 17)
+
+[node name="brik56" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(935, 17)
+
+[node name="brik57" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(901, 17)
+
+[node name="brik58" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(867, 17)
+
+[node name="brik59" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(833, 17)
+
+[node name="brik60" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(799, 17)
+
+[node name="brik61" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(765, 17)
+
+[node name="brik62" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(731, 17)
+
+[node name="brik63" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(697, 17)
+
+[node name="brik64" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(663, 17)
+
+[node name="brik65" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(629, 17)
+
+[node name="brik66" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(595, 17)
+
+[node name="brik67" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(561, 17)
+
+[node name="brik68" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(527, 17)
+
+[node name="brik69" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(493, 17)
+
+[node name="brik70" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(459, 17)
+
+[node name="brik71" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(425, 17)
+
+[node name="brik72" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(391, 17)
+
+[node name="brik73" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(357, 17)
+
+[node name="brik74" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(323, 17)
+
+[node name="brik75" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(391, 563)
+
+[node name="brik76" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(357, 563)
+
+[node name="brik77" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(459, 529)
+
+[node name="brik78" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(425, 529)
+
+[node name="brik79" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(493, 529)
+
+[node name="brik80" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(527, 529)
+
+[node name="brik81" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(561, 529)
+
+[node name="brik82" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(595, 529)
+
+[node name="brik83" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(629, 529)
+
+[node name="brik84" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(663, 529)
+
+[node name="brik85" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(697, 529)
+
+[node name="brik86" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(731, 529)
+
+[node name="brik87" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(765, 529)
+
+[node name="brik88" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(357, 597)
+
+[node name="brik89" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(1139, 597)
+
+[node name="brik90" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(1139, 563)
+
+[node name="brik91" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(1139, 529)
+
+[node name="brik92" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(1139, 495)
+
+[node name="brik93" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(1139, 461)
+
+[node name="brik94" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(1139, 427)
+
+[node name="brik95" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(1139, 393)
+
+[node name="brik96" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(1139, 359)
+
+[node name="brik97" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(1139, 325)
+
+[node name="brik98" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(1139, 291)
+
+[node name="brik99" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(1139, 257)
+
+[node name="brik100" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(1139, 223)
+
+[node name="brik101" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(1139, 189)
+
+[node name="brik102" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(1139, 155)
+
+[node name="brik103" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(1139, 121)
+
+[node name="brik104" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(1139, 87)
+
+[node name="brik105" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(1173, 87)
+
+[node name="brik106" parent="." instance=ExtResource("3_rb7aj")]
+position = Vector2(595, 597)
+
+[node name="Torch1_1" type="Sprite2D" parent="."]
+position = Vector2(51, 160)
+texture = ExtResource("3_08ifv")
+
+[node name="Torch1_2" type="Sprite2D" parent="."]
+position = Vector2(799, 529)
+texture = ExtResource("3_08ifv")
+
+[node name="Torch1_3" type="Sprite2D" parent="."]
+position = Vector2(1105, 529)
+scale = Vector2(1.02941, 1)
+texture = ExtResource("3_08ifv")
+flip_h = true

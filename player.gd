@@ -11,6 +11,9 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var imagePlayer = get_node("Player1")
 
 func _physics_process(delta):
+	
+	if Input.is_action_just_pressed("restart"):
+		get_tree().change_scene_to_file("res://main_scene.tscn")
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
