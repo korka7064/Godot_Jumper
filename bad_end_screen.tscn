@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://8vycjwjihipq"]
+
+[ext_resource type="Script" path="res://bad_end_screen.gd" id="1_bj6la"]
+
+[node name="bad_end_screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bj6la")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 460.0
+offset_top = 483.0
+offset_right = 797.0
+offset_bottom = 539.0
+
+[node name="return" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+focus_neighbor_left = NodePath("../exit")
+text = "Return to menu"
+
+[node name="retry" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Try again"
+
+[node name="exit" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+focus_neighbor_right = NodePath("../return")
+text = "Exit to desktop"
+
+[connection signal="pressed" from="HBoxContainer/return" to="." method="_on_return_pressed"]
+[connection signal="pressed" from="HBoxContainer/retry" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="HBoxContainer/exit" to="." method="_on_exit_pressed"]
