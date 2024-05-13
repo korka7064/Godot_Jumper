@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dj8ra1ehnroa3"]
 
-[ext_resource type="Script" path="res://player.gd" id="1_3b8sw"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_hbhmx"]
 [ext_resource type="Texture2D" uid="uid://qwm2koiqb16d" path="res://sprites/player1.png" id="1_lftjc"]
 [ext_resource type="Texture2D" uid="uid://dclb3rrw7bcw0" path="res://sprites/player2.1.png" id="3_f1mes"]
 
@@ -8,7 +8,7 @@
 size = Vector2(30, 43)
 
 [node name="Player" type="CharacterBody2D"]
-script = ExtResource("1_3b8sw")
+script = ExtResource("1_hbhmx")
 
 [node name="Player1" type="Sprite2D" parent="."]
 scale = Vector2(1.5, 1.5)

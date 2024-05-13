@@ -1,0 +1,46 @@
+[gd_scene load_steps=2 format=3 uid="uid://pnd008fhj5st"]
+
+[ext_resource type="Texture2D" uid="uid://u480bv6yar4s" path="res://sprites/menu2.png" id="1_3b5w0"]
+
+[node name="esc_menu" type="Node2D"]
+
+[node name="Menu2" type="Sprite2D" parent="."]
+texture = ExtResource("1_3b5w0")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = -92.0
+offset_top = -74.0
+offset_right = 141.0
+offset_bottom = 191.0
+
+[node name="TextEdit" type="TextEdit" parent="RichTextLabel"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 1.0
+offset_right = 226.0
+offset_bottom = 41.0
+text = "CONTINUE"
+
+[node name="TextEdit2" type="TextEdit" parent="RichTextLabel"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 73.0
+offset_right = 230.0
+offset_bottom = 110.0
+text = "OPTIONS"
+
+[node name="TextEdit3" type="TextEdit" parent="RichTextLabel"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 144.0
+offset_right = 228.0
+offset_bottom = 175.0
+text = "RESTART"
+
+[node name="TextEdit4" type="TextEdit" parent="RichTextLabel"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 222.0
+offset_right = 226.0
+offset_bottom = 263.0
+text = "EXIT TO MENU"

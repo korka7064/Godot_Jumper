@@ -12,11 +12,11 @@ func _process(delta):
 
 
 func _on_return_pressed():
-	get_tree().change_scene_to_file("res://menu.tscn")
+	get_tree().change_scene_to_file("res://tscn/menu.tscn")
 
 
 func _on_retry_pressed():
-	get_tree().change_scene_to_file("res://main_scene.tscn")
+	get_tree().change_scene_to_file("res://tscn/main_scene.tscn")
 
 
 func _on_exit_pressed():

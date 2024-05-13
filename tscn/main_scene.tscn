@@ -1,14 +1,14 @@
 [gd_scene load_steps=8 format=3 uid="uid://b36nn6t02s0ws"]
 
-[ext_resource type="Script" path="res://main_scene.gd" id="1_g02kd"]
-[ext_resource type="PackedScene" uid="uid://dj8ra1ehnroa3" path="res://player.tscn" id="1_n4cte"]
+[ext_resource type="Script" path="res://scripts/main_scene.gd" id="1_g02kd"]
+[ext_resource type="PackedScene" uid="uid://dj8ra1ehnroa3" path="res://tscn/player.tscn" id="1_n4cte"]
 [ext_resource type="Texture2D" uid="uid://0rm35fod4r36" path="res://sprites/torch1.1.png" id="3_08ifv"]
-[ext_resource type="PackedScene" uid="uid://c6pg2n2b5w0bl" path="res://brik.tscn" id="3_rb7aj"]
+[ext_resource type="PackedScene" uid="uid://c6pg2n2b5w0bl" path="res://tscn/brik.tscn" id="3_rb7aj"]
 [ext_resource type="Texture2D" uid="uid://c0eqyrlq3dopu" path="res://sprites/torch2.1.png" id="4_kxw6v"]
 [ext_resource type="Texture2D" uid="uid://jhw0lxb76p" path="res://sprites/portal1.png" id="5_v5f7o"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8g1qj"]
-size = Vector2(218, 56)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rkyxj"]
+size = Vector2(75, 22)
 
 [node name="MainScene" type="Node2D"]
 script = ExtResource("1_g02kd")
@@ -42,7 +42,7 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_kxw6v")
 
 [node name="Player" parent="." instance=ExtResource("1_n4cte")]
-position = Vector2(847, 550)
+position = Vector2(854, 593)
 
 [node name="TextEdit" type="TextEdit" parent="."]
 offset_right = 305.0
@@ -370,16 +370,10 @@ position = Vector2(1173, 87)
 [node name="brik106" parent="." instance=ExtResource("3_rb7aj")]
 position = Vector2(595, 597)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="trigger" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(639, 677)
-shape = SubResource("RectangleShape2D_8g1qj")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="trigger"]
+position = Vector2(644.5, 659)
+shape = SubResource("RectangleShape2D_rkyxj")
 
-[node name="Area2D" type="Area2D" parent="StaticBody2D"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/Area2D"]
-position = Vector2(640, 676)
-shape = SubResource("RectangleShape2D_8g1qj")
-
-[connection signal="body_entered" from="StaticBody2D/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="trigger" to="." method="_on_trigger_body_entered"]
