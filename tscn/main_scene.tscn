@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://b36nn6t02s0ws"]
+[gd_scene load_steps=19 format=3 uid="uid://b36nn6t02s0ws"]
 
 [ext_resource type="Script" path="res://scripts/main_scene.gd" id="1_g02kd"]
 [ext_resource type="PackedScene" uid="uid://dj8ra1ehnroa3" path="res://tscn/player.tscn" id="1_n4cte"]
@@ -6,9 +6,85 @@
 [ext_resource type="PackedScene" uid="uid://c6pg2n2b5w0bl" path="res://tscn/brik.tscn" id="3_rb7aj"]
 [ext_resource type="PackedScene" uid="uid://bnd8aeoorwotr" path="res://tscn/esc_menu.tscn" id="7_3iq3c"]
 [ext_resource type="Texture2D" uid="uid://dba1ycl723skg" path="res://sprites/brik.png" id="7_cms4b"]
+[ext_resource type="PackedScene" uid="uid://c6emfwd5l3g8f" path="res://tscn/lava.tscn" id="7_euxta"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rkyxj"]
 size = Vector2(136, 23.5625)
+
+[sub_resource type="Animation" id="Animation_4lybd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("trigger_animation1/Brik:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("trigger_animation1/Brik2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("trigger_animation1/Brik3:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("trigger_animation1/Brik4:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("trigger_animation1/Brik5:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("trigger_animation1/Brik6:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_dgoov"]
 resource_name = "secret 1"
@@ -86,81 +162,6 @@ tracks/5/keys = {
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_4lybd"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("trigger_animation1/Brik:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("trigger_animation1/Brik2:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("trigger_animation1/Brik3:modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("trigger_animation1/Brik4:modulate")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("trigger_animation1/Brik5:modulate")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("trigger_animation1/Brik6:modulate")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1t3ar"]
 _data = {
 "RESET": SubResource("Animation_4lybd"),
@@ -169,6 +170,33 @@ _data = {
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_odfdq"]
 size = Vector2(34, 17)
+
+[sub_resource type="Animation" id="Animation_pcj2j"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Player:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Player:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.9, 0.9)]
+}
 
 [sub_resource type="Animation" id="Animation_j67yg"]
 resource_name = "teleport1"
@@ -210,33 +238,6 @@ tracks/2/keys = {
 "values": [Vector2(1, 1), Vector2(0, 0), Vector2(1e-05, 1e-05), Vector2(1, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_pcj2j"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../Player:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../Player:scale")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0.9, 0.9)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_44sgl"]
 _data = {
 "RESET": SubResource("Animation_pcj2j"),
@@ -247,6 +248,9 @@ _data = {
 size = Vector2(22, 34)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xbgp8"]
+size = Vector2(22, 34)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hh8v8"]
 size = Vector2(22, 34)
 
 [node name="MainScene" type="Node2D"]
@@ -1064,31 +1068,69 @@ position = Vector2(391, 257)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="TileMap/trigger_animation3"]
 
-[node name="Area2D" type="Area2D" parent="TileMap"]
+[node name="Area2D" type="Area2D" parent="TileMap/trigger_animation3"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/trigger_animation3/Area2D"]
 position = Vector2(397, 257)
 shape = SubResource("RectangleShape2D_xbgp8")
 
 [node name="trigger_animation4" type="Node2D" parent="TileMap"]
-
-[node name="Area2D" type="Area2D" parent="TileMap/trigger_animation4"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/trigger_animation4/Area2D"]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="TileMap/trigger_animation4"]
 
 [node name="Portal3" parent="TileMap/trigger_animation4" instance=ExtResource("2_owhot")]
 position = Vector2(1105, 189)
 
+[node name="Area2D" type="Area2D" parent="TileMap/trigger_animation4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/trigger_animation4/Area2D"]
+position = Vector2(1111, 189)
+shape = SubResource("RectangleShape2D_hh8v8")
+
 [node name="Player" parent="TileMap" instance=ExtResource("1_n4cte")]
-position = Vector2(65, -111)
+position = Vector2(327, 74)
 scale = Vector2(0.9, 0.9)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 visible = false
 
 [node name="esc_menu" parent="CanvasLayer" instance=ExtResource("7_3iq3c")]
+
+[node name="lava" parent="." instance=ExtResource("7_euxta")]
+position = Vector2(187, 325)
+
+[node name="lava2" parent="." instance=ExtResource("7_euxta")]
+position = Vector2(221, 325)
+
+[node name="lava3" parent="." instance=ExtResource("7_euxta")]
+position = Vector2(187, 155)
+
+[node name="lava4" parent="." instance=ExtResource("7_euxta")]
+position = Vector2(221, 155)
+
+[node name="lava5" parent="." instance=ExtResource("7_euxta")]
+position = Vector2(255, 155)
+
+[node name="lava6" parent="." instance=ExtResource("7_euxta")]
+position = Vector2(289, 155)
+
+[node name="lava7" parent="." instance=ExtResource("7_euxta")]
+position = Vector2(527, 223)
+
+[node name="lava8" parent="." instance=ExtResource("7_euxta")]
+position = Vector2(561, 223)
+
+[node name="lava9" parent="." instance=ExtResource("7_euxta")]
+position = Vector2(629, 223)
+
+[node name="lava10" parent="." instance=ExtResource("7_euxta")]
+position = Vector2(663, 223)
+
+[node name="lava11" parent="." instance=ExtResource("7_euxta")]
+position = Vector2(765, 223)
+
+[node name="lava12" parent="." instance=ExtResource("7_euxta")]
+position = Vector2(799, 223)
 
 [connection signal="body_entered" from="trigger" to="." method="_on_trigger_body_entered"]
 [connection signal="body_entered" from="TileMap/trigger_animation1/trigger1" to="." method="_on_trigger_1_body_entered"]
