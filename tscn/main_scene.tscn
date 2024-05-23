@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b36nn6t02s0ws"]
+[gd_scene load_steps=17 format=3 uid="uid://b36nn6t02s0ws"]
 
 [ext_resource type="Script" path="res://scripts/main_scene.gd" id="1_g02kd"]
 [ext_resource type="PackedScene" uid="uid://dj8ra1ehnroa3" path="res://tscn/player.tscn" id="1_n4cte"]
@@ -10,26 +10,247 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rkyxj"]
 size = Vector2(136, 23.5625)
 
+[sub_resource type="Animation" id="Animation_dgoov"]
+resource_name = "secret 1"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("trigger_animation1/Brik:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("trigger_animation1/Brik2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("trigger_animation1/Brik3:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("trigger_animation1/Brik4:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("trigger_animation1/Brik5:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("trigger_animation1/Brik6:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_4lybd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("trigger_animation1/Brik:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("trigger_animation1/Brik2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("trigger_animation1/Brik3:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("trigger_animation1/Brik4:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("trigger_animation1/Brik5:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("trigger_animation1/Brik6:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1t3ar"]
+_data = {
+"RESET": SubResource("Animation_4lybd"),
+"secret 1": SubResource("Animation_dgoov")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_odfdq"]
+size = Vector2(34, 17)
+
+[sub_resource type="Animation" id="Animation_j67yg"]
+resource_name = "teleport1"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Player:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3, 0.5, 0.6, 0.7, 0.9, 1.1, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(375, 88), Vector2(380, 87), Vector2(394, 88), Vector2(395, 78), Vector2(391, 72), Vector2(386, 77), Vector2(384, 84), Vector2(390, 88), Vector2(121, 156), Vector2(115, 155), Vector2(116, 152), Vector2(120, 151), Vector2(123, 152), Vector2(124, 155), Vector2(121, 156)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Player:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3, 0.5, 0.6, 0.7, 0.9, 1.1, 1.5, 1.6, 1.7, 1.8, 1.9, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.261799, -0.872665, -1.74533, -2.79253, -3.66519, -5.06145, -6.28319, -3.66519, -2.79253, -2.26893, -1.74533, -1.0472, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Player:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.1, 1.4, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0, 0), Vector2(1e-05, 1e-05), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_pcj2j"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Player:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Player:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.9, 0.9)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_44sgl"]
+_data = {
+"RESET": SubResource("Animation_pcj2j"),
+"teleport1": SubResource("Animation_j67yg")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vlbcu"]
+size = Vector2(22, 34)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xbgp8"]
+size = Vector2(22, 34)
+
 [node name="MainScene" type="Node2D"]
 script = ExtResource("1_g02kd")
-
-[node name="Portal1" parent="." instance=ExtResource("2_owhot")]
-position = Vector2(391, 87)
-
-[node name="Portal2" parent="." instance=ExtResource("2_owhot")]
-position = Vector2(119, 155)
-
-[node name="Portal3" parent="." instance=ExtResource("2_owhot")]
-position = Vector2(391, 257)
-
-[node name="Portal4" parent="." instance=ExtResource("2_owhot")]
-position = Vector2(459, 189)
-
-[node name="Portal5" parent="." instance=ExtResource("2_owhot")]
-position = Vector2(1105, 189)
-
-[node name="Player" parent="." instance=ExtResource("1_n4cte")]
-position = Vector2(68, -106)
 
 [node name="trigger" type="Area2D" parent="."]
 
@@ -464,10 +685,10 @@ position = Vector2(119, 291)
 position = Vector2(153, 291)
 
 [node name="brik142" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(187, 325)
+position = Vector2(187, 359)
 
 [node name="brik143" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(221, 325)
+position = Vector2(221, 359)
 
 [node name="brik144" parent="TileMap" instance=ExtResource("3_rb7aj")]
 position = Vector2(153, 257)
@@ -664,30 +885,6 @@ position = Vector2(969, 87)
 [node name="brik208" parent="TileMap" instance=ExtResource("3_rb7aj")]
 position = Vector2(969, 53)
 
-[node name="Brik" type="Sprite2D" parent="TileMap"]
-position = Vector2(1037, 87)
-texture = ExtResource("7_cms4b")
-
-[node name="Brik2" type="Sprite2D" parent="TileMap"]
-position = Vector2(1037, 53)
-texture = ExtResource("7_cms4b")
-
-[node name="Brik3" type="Sprite2D" parent="TileMap"]
-position = Vector2(1071, 53)
-texture = ExtResource("7_cms4b")
-
-[node name="Brik4" type="Sprite2D" parent="TileMap"]
-position = Vector2(1071, 87)
-texture = ExtResource("7_cms4b")
-
-[node name="Brik5" type="Sprite2D" parent="TileMap"]
-position = Vector2(1105, 53)
-texture = ExtResource("7_cms4b")
-
-[node name="Brik6" type="Sprite2D" parent="TileMap"]
-position = Vector2(1105, 87)
-texture = ExtResource("7_cms4b")
-
 [node name="Brik7" type="Sprite2D" parent="TileMap"]
 position = Vector2(1003, -15)
 texture = ExtResource("7_cms4b")
@@ -806,8 +1003,93 @@ position = Vector2(1071, 597)
 [node name="brik242" parent="TileMap" instance=ExtResource("3_rb7aj")]
 position = Vector2(1105, 597)
 
+[node name="trigger_animation1" type="Node2D" parent="TileMap"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TileMap/trigger_animation1"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_1t3ar")
+}
+
+[node name="Brik" type="Sprite2D" parent="TileMap/trigger_animation1"]
+position = Vector2(1037, 87)
+texture = ExtResource("7_cms4b")
+
+[node name="Brik2" type="Sprite2D" parent="TileMap/trigger_animation1"]
+position = Vector2(1037, 53)
+texture = ExtResource("7_cms4b")
+
+[node name="Brik3" type="Sprite2D" parent="TileMap/trigger_animation1"]
+position = Vector2(1071, 53)
+texture = ExtResource("7_cms4b")
+
+[node name="Brik4" type="Sprite2D" parent="TileMap/trigger_animation1"]
+position = Vector2(1071, 87)
+texture = ExtResource("7_cms4b")
+
+[node name="Brik5" type="Sprite2D" parent="TileMap/trigger_animation1"]
+position = Vector2(1105, 53)
+texture = ExtResource("7_cms4b")
+
+[node name="Brik6" type="Sprite2D" parent="TileMap/trigger_animation1"]
+position = Vector2(1105, 87)
+texture = ExtResource("7_cms4b")
+
+[node name="trigger1" type="Area2D" parent="TileMap/trigger_animation1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/trigger_animation1/trigger1"]
+position = Vector2(1037, 95.5)
+shape = SubResource("RectangleShape2D_odfdq")
+
+[node name="trigger_animation2" type="Node2D" parent="TileMap"]
+
+[node name="Portal1" parent="TileMap/trigger_animation2" instance=ExtResource("2_owhot")]
+position = Vector2(391, 87)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TileMap/trigger_animation2"]
+libraries = {
+"": SubResource("AnimationLibrary_44sgl")
+}
+
+[node name="trigger2" type="Area2D" parent="TileMap/trigger_animation2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/trigger_animation2/trigger2"]
+position = Vector2(397, 87)
+shape = SubResource("RectangleShape2D_vlbcu")
+
+[node name="trigger_animation3" type="Node2D" parent="TileMap"]
+
+[node name="Portal2" parent="TileMap/trigger_animation3" instance=ExtResource("2_owhot")]
+position = Vector2(391, 257)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TileMap/trigger_animation3"]
+
+[node name="Area2D" type="Area2D" parent="TileMap"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/Area2D"]
+position = Vector2(397, 257)
+shape = SubResource("RectangleShape2D_xbgp8")
+
+[node name="trigger_animation4" type="Node2D" parent="TileMap"]
+
+[node name="Area2D" type="Area2D" parent="TileMap/trigger_animation4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/trigger_animation4/Area2D"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TileMap/trigger_animation4"]
+
+[node name="Portal3" parent="TileMap/trigger_animation4" instance=ExtResource("2_owhot")]
+position = Vector2(1105, 189)
+
+[node name="Player" parent="TileMap" instance=ExtResource("1_n4cte")]
+position = Vector2(65, -111)
+scale = Vector2(0.9, 0.9)
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="esc_menu" parent="CanvasLayer" instance=ExtResource("7_3iq3c")]
 
 [connection signal="body_entered" from="trigger" to="." method="_on_trigger_body_entered"]
+[connection signal="body_entered" from="TileMap/trigger_animation1/trigger1" to="." method="_on_trigger_1_body_entered"]
+[connection signal="body_entered" from="TileMap/trigger_animation2/trigger2" to="." method="_on_trigger_2_body_entered"]
