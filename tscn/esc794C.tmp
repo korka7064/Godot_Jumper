@@ -1,9 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://bnd8aeoorwotr"]
+[gd_scene load_steps=9 format=3 uid="uid://bnd8aeoorwotr"]
 
 [ext_resource type="Shader" path="res://shaders/pause_menu.gdshader" id="1_3vbd1"]
 [ext_resource type="Script" path="res://scripts/esc_menu.gd" id="1_8r5fs"]
 [ext_resource type="Texture2D" uid="uid://u480bv6yar4s" path="res://sprites/menu2.png" id="1_plkdu"]
-[ext_resource type="Theme" uid="uid://d3ed5xvjfu7em" path="res://shaders/esc.tres" id="4_sek3k"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_c0mpl"]
 shader = ExtResource("1_3vbd1")
@@ -11,7 +10,7 @@ shader_parameter/lod = 0.843
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_yg5ko"]
 shader = ExtResource("1_3vbd1")
-shader_parameter/lod = 0.0
+shader_parameter/lod = 0.822
 
 [sub_resource type="Animation" id="Animation_x0vno"]
 length = 0.001
@@ -37,12 +36,12 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [0.0]
+"values": [0.822]
 }
 
 [sub_resource type="Animation" id="Animation_o0xt2"]
 resource_name = "esc_blur"
-length = 0.3
+length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -50,7 +49,7 @@ tracks/0/path = NodePath("Menu2:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3),
+"times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(1034, -179), Vector2(1032, 149)]
@@ -62,10 +61,10 @@ tracks/1/path = NodePath("ColorRect:material:shader_parameter/lod")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.3),
+"times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [0.0, 0.721]
+"values": [0.822, 0.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_s70np"]
@@ -106,7 +105,6 @@ offset_right = 136.0
 offset_bottom = -35.0
 focus_neighbor_top = NodePath("../Exit_to_dectop")
 focus_neighbor_bottom = NodePath("../Restart")
-theme = ExtResource("4_sek3k")
 text = "Resume"
 
 [node name="Restart" type="Button" parent="Menu2"]
@@ -116,7 +114,6 @@ offset_right = 136.0
 offset_bottom = 33.0
 focus_neighbor_top = NodePath("../Resume")
 focus_neighbor_bottom = NodePath("../Exit_to_menu")
-theme = ExtResource("4_sek3k")
 text = "Restart"
 
 [node name="Exit_to_menu" type="Button" parent="Menu2"]
@@ -126,7 +123,6 @@ offset_right = 135.0
 offset_bottom = 108.0
 focus_neighbor_top = NodePath("../Restart")
 focus_neighbor_bottom = NodePath("../Exit_to_dectop")
-theme = ExtResource("4_sek3k")
 text = "Exit to menu"
 
 [node name="Exit_to_dectop" type="Button" parent="Menu2"]
@@ -136,7 +132,6 @@ offset_right = 134.0
 offset_bottom = 182.0
 focus_neighbor_top = NodePath("../Exit_to_menu")
 focus_neighbor_bottom = NodePath("../Resume")
-theme = ExtResource("4_sek3k")
 text = "Exit ot desctop"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

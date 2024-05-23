@@ -9,7 +9,6 @@ var jCounter = 0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 @onready var imagePlayer1 = get_node("Player1")
-@onready var imagePlayer2 = get_node("")
 
 func _physics_process(delta):
 	
@@ -18,7 +17,6 @@ func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
-		#if gravity < 0:
 			
 
 	# Handle jump.
@@ -39,13 +37,10 @@ func _physics_process(delta):
 	if direction:
 		velocity.x = direction * SPEED
 		imagePlayer1.flip_h = true
-		#imagePlayer2.flip_h = true
 		if direction < 0:
 			imagePlayer1.flip_h = true
-			#imagePlayer2.flip_h = true
 		else:
 			imagePlayer1.flip_h = false
-			#imagePlayer2.flip_h = false
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		
