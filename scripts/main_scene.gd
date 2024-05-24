@@ -55,9 +55,3 @@ func _on_trigger_body_entered(body):
 	if body.name == "Player":
 		get_tree().change_scene_to_file("res://tscn/bad_end_screen.tscn")
 
-
-
-
-
-
-

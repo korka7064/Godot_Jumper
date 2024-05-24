@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://b36nn6t02s0ws"]
+[gd_scene load_steps=54 format=3 uid="uid://b36nn6t02s0ws"]
 
 [ext_resource type="Script" path="res://scripts/main_scene.gd" id="1_g02kd"]
 [ext_resource type="PackedScene" uid="uid://dj8ra1ehnroa3" path="res://tscn/player.tscn" id="1_n4cte"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://dba1ycl723skg" path="res://sprites/brik.png" id="7_cms4b"]
 [ext_resource type="PackedScene" uid="uid://c6emfwd5l3g8f" path="res://tscn/lava.tscn" id="7_euxta"]
 [ext_resource type="PackedScene" uid="uid://dcv55xli1itub" path="res://tscn/gun_trap_1.tscn" id="11_grfpn"]
+[ext_resource type="Texture2D" uid="uid://0rm35fod4r36" path="res://sprites/torch1.1.png" id="13_lyi6u"]
 
 [sub_resource type="Animation" id="Animation_4lybd"]
 length = 0.001
@@ -736,27 +737,6 @@ _data = {
 "secret3": SubResource("Animation_000g8")
 }
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rkyxj"]
-size = Vector2(136, 23.5625)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ikg0d"]
-size = Vector2(68, 20)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6rno8"]
-size = Vector2(68, 20)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_iwchk"]
-size = Vector2(68, 17)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ah1wq"]
-size = Vector2(68, 20)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_k5ltm"]
-size = Vector2(544.5, 20)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_nltpp"]
-size = Vector2(68, 12)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7vdvk"]
 size = Vector2(34, 2)
 
@@ -847,12 +827,55 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x4472"]
 size = Vector2(22, 34)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rkyxj"]
+size = Vector2(136, 23.5625)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ikg0d"]
+size = Vector2(68, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6rno8"]
+size = Vector2(68, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iwchk"]
+size = Vector2(68, 17)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ah1wq"]
+size = Vector2(68, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k5ltm"]
+size = Vector2(544.5, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nltpp"]
+size = Vector2(68, 12)
+
 [node name="MainScene" type="Node2D"]
 script = ExtResource("1_g02kd")
 
 [node name="Wall2" type="Sprite2D" parent="."]
 position = Vector2(579, 324)
 texture = ExtResource("2_wq35n")
+
+[node name="Torch1_1" type="Sprite2D" parent="."]
+position = Vector2(51, 52)
+texture = ExtResource("13_lyi6u")
+
+[node name="Torch1_2" type="Sprite2D" parent="."]
+position = Vector2(935, 87)
+texture = ExtResource("13_lyi6u")
+flip_h = true
+
+[node name="Torch1_3" type="Sprite2D" parent="."]
+position = Vector2(459, 325)
+texture = ExtResource("13_lyi6u")
+
+[node name="Torch1_4" type="Sprite2D" parent="."]
+position = Vector2(51, 393)
+texture = ExtResource("13_lyi6u")
+
+[node name="Torch1_5" type="Sprite2D" parent="."]
+position = Vector2(85, 393)
+texture = ExtResource("13_lyi6u")
+flip_h = true
 
 [node name="TileMap" type="TileMap" parent="."]
 format = 2
@@ -1971,8 +1994,47 @@ libraries = {
 "": SubResource("AnimationLibrary_hf63c")
 }
 
+[node name="trigger_animation8" type="Node2D" parent="TileMap"]
+
+[node name="gun_trap1" parent="TileMap/trigger_animation8" instance=ExtResource("11_grfpn")]
+position = Vector2(967, 685)
+
+[node name="gun_trap2" parent="TileMap/trigger_animation8" instance=ExtResource("11_grfpn")]
+position = Vector2(388, 731)
+rotation = 3.14159
+
+[node name="WrongButton1" type="Sprite2D" parent="TileMap/trigger_animation8"]
+position = Vector2(1105, 359)
+texture = ExtResource("5_eluwh")
+
+[node name="WrongButton2" type="Sprite2D" parent="TileMap/trigger_animation8"]
+position = Vector2(1105, 359)
+texture = ExtResource("6_i04dk")
+
+[node name="trigger8" type="Area2D" parent="TileMap/trigger_animation8"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/trigger_animation8/trigger8"]
+position = Vector2(1105, 375)
+shape = SubResource("RectangleShape2D_7vdvk")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TileMap/trigger_animation8"]
+libraries = {
+"": SubResource("AnimationLibrary_n87wg")
+}
+
+[node name="trigger_animation9" type="Node2D" parent="TileMap"]
+
+[node name="Portal1" parent="TileMap/trigger_animation9" instance=ExtResource("2_owhot")]
+position = Vector2(1105, 563)
+
+[node name="trigger9" type="Area2D" parent="TileMap/trigger_animation9"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/trigger_animation9/trigger9"]
+position = Vector2(1111, 563)
+shape = SubResource("RectangleShape2D_x4472")
+
 [node name="Player" parent="TileMap" instance=ExtResource("1_n4cte")]
-position = Vector2(972, 562)
+position = Vector2(66, -109)
 
 [node name="lava_case" type="Node2D" parent="TileMap"]
 
@@ -2086,47 +2148,7 @@ shape = SubResource("RectangleShape2D_k5ltm")
 position = Vector2(986, 506)
 shape = SubResource("RectangleShape2D_nltpp")
 
-[node name="trigger_animation8" type="Node2D" parent="TileMap"]
-
-[node name="gun_trap1" parent="TileMap/trigger_animation8" instance=ExtResource("11_grfpn")]
-position = Vector2(967, 685)
-
-[node name="gun_trap2" parent="TileMap/trigger_animation8" instance=ExtResource("11_grfpn")]
-position = Vector2(388, 731)
-rotation = 3.14159
-
-[node name="WrongButton1" type="Sprite2D" parent="TileMap/trigger_animation8"]
-position = Vector2(1105, 359)
-texture = ExtResource("5_eluwh")
-
-[node name="WrongButton2" type="Sprite2D" parent="TileMap/trigger_animation8"]
-position = Vector2(1105, 359)
-texture = ExtResource("6_i04dk")
-
-[node name="trigger8" type="Area2D" parent="TileMap/trigger_animation8"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/trigger_animation8/trigger8"]
-position = Vector2(1105, 375)
-shape = SubResource("RectangleShape2D_7vdvk")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="TileMap/trigger_animation8"]
-libraries = {
-"": SubResource("AnimationLibrary_n87wg")
-}
-
-[node name="trigger_animation9" type="Node2D" parent="TileMap"]
-
-[node name="Portal1" parent="TileMap/trigger_animation9" instance=ExtResource("2_owhot")]
-position = Vector2(1105, 563)
-
-[node name="trigger9" type="Area2D" parent="TileMap/trigger_animation9"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/trigger_animation9/trigger9"]
-position = Vector2(1111, 563)
-shape = SubResource("RectangleShape2D_x4472")
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="esc_menu" parent="CanvasLayer" instance=ExtResource("7_3iq3c")]
 
@@ -2137,6 +2159,6 @@ visible = false
 [connection signal="body_entered" from="TileMap/trigger_animation5/trigger5" to="." method="_on_trigger_5_body_entered"]
 [connection signal="body_exited" from="TileMap/trigger_animation6/trigger6" to="." method="_on_trigger_6_body_exited"]
 [connection signal="body_entered" from="TileMap/trigger_animation7/trigger7" to="." method="_on_trigger_7_body_entered"]
-[connection signal="body_entered" from="TileMap/Death_trigger/trigger" to="." method="_on_trigger_body_entered"]
 [connection signal="body_entered" from="TileMap/trigger_animation8/trigger8" to="." method="_on_trigger_8_body_entered"]
 [connection signal="body_entered" from="TileMap/trigger_animation9/trigger9" to="." method="_on_trigger_9_body_entered"]
+[connection signal="body_entered" from="TileMap/Death_trigger/trigger" to="." method="_on_trigger_body_entered"]
