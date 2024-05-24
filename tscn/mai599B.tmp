@@ -1,17 +1,14 @@
-[gd_scene load_steps=53 format=3 uid="uid://b36nn6t02s0ws"]
+[gd_scene load_steps=35 format=3 uid="uid://b36nn6t02s0ws"]
 
 [ext_resource type="Script" path="res://scripts/main_scene.gd" id="1_g02kd"]
 [ext_resource type="PackedScene" uid="uid://dj8ra1ehnroa3" path="res://tscn/player.tscn" id="1_n4cte"]
 [ext_resource type="PackedScene" uid="uid://c5p05l3rcqlue" path="res://tscn/portal_1.tscn" id="2_owhot"]
-[ext_resource type="Texture2D" uid="uid://csw6tbrbni8ax" path="res://sprites/Wall2.png" id="2_wq35n"]
 [ext_resource type="PackedScene" uid="uid://c6pg2n2b5w0bl" path="res://tscn/brik.tscn" id="3_rb7aj"]
-[ext_resource type="PackedScene" uid="uid://bg4aasielbup1" path="res://tscn/bars.tscn" id="4_h2jud"]
 [ext_resource type="Texture2D" uid="uid://du83x0fkah3b" path="res://sprites/wrong_button/wrong_button1.png" id="5_eluwh"]
 [ext_resource type="Texture2D" uid="uid://pl1x1b1cjr8a" path="res://sprites/wrong_button/wrong_button2.png" id="6_i04dk"]
 [ext_resource type="PackedScene" uid="uid://bnd8aeoorwotr" path="res://tscn/esc_menu.tscn" id="7_3iq3c"]
 [ext_resource type="Texture2D" uid="uid://dba1ycl723skg" path="res://sprites/brik.png" id="7_cms4b"]
 [ext_resource type="PackedScene" uid="uid://c6emfwd5l3g8f" path="res://tscn/lava.tscn" id="7_euxta"]
-[ext_resource type="PackedScene" uid="uid://dcv55xli1itub" path="res://tscn/gun_trap_1.tscn" id="11_grfpn"]
 
 [sub_resource type="Animation" id="Animation_4lybd"]
 length = 0.001
@@ -249,9 +246,6 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vlbcu"]
 size = Vector2(22, 34)
 
-[sub_resource type="Animation" id="Animation_4grim"]
-length = 0.001
-
 [sub_resource type="Animation" id="Animation_f870t"]
 resource_name = "teleport2"
 length = 0.1
@@ -268,6 +262,9 @@ tracks/0/keys = {
 "values": [Vector2(379, 259), Vector2(468, 167)]
 }
 
+[sub_resource type="Animation" id="Animation_4grim"]
+length = 0.001
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1ky5i"]
 _data = {
 "RESET": SubResource("Animation_4grim"),
@@ -276,9 +273,6 @@ _data = {
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xbgp8"]
 size = Vector2(22, 34)
-
-[sub_resource type="Animation" id="Animation_iibit"]
-length = 0.001
 
 [sub_resource type="Animation" id="Animation_op477"]
 resource_name = "teleport3"
@@ -296,6 +290,9 @@ tracks/0/keys = {
 "values": [Vector2(1090, 189), Vector2(56, 387)]
 }
 
+[sub_resource type="Animation" id="Animation_iibit"]
+length = 0.001
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_354qm"]
 _data = {
 "RESET": SubResource("Animation_iibit"),
@@ -308,27 +305,13 @@ size = Vector2(22, 34)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ovglh"]
 size = Vector2(34, 3)
 
-[sub_resource type="Animation" id="Animation_kgwwc"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../bars:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(221, 563)]
-}
-
 [sub_resource type="Animation" id="Animation_spl55"]
 resource_name = "presure_button"
+length = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("trigger5/WrongButton1:modulate")
+tracks/0/path = NodePath("WrongButton1:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -340,7 +323,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("trigger5/WrongButton2:modulate")
+tracks/1/path = NodePath("WrongButton2:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -349,391 +332,14 @@ tracks/1/keys = {
 "update": 1,
 "values": [Color(1, 1, 1, 1)]
 }
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("../bars:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(221, 563), Vector2(221, 529)]
-}
+
+[sub_resource type="Animation" id="Animation_kgwwc"]
+length = 0.001
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_dufvj"]
 _data = {
 "RESET": SubResource("Animation_kgwwc"),
 "presure_button": SubResource("Animation_spl55")
-}
-
-[sub_resource type="Animation" id="Animation_6cejy"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Brik:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Brik2:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Brik3:modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Brik4:modulate")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Brik5:modulate")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Brik6:modulate")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("Brik7:modulate")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_wem56"]
-resource_name = "secret2"
-length = 0.4
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Brik:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Brik2:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Brik3:modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Brik4:modulate")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Brik5:modulate")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Brik6:modulate")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("Brik7:modulate")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_mgaf5"]
-_data = {
-"RESET": SubResource("Animation_6cejy"),
-"secret2": SubResource("Animation_wem56")
-}
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_i22q6"]
-size = Vector2(11, 34)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7mllt"]
-size = Vector2(11, 34)
-
-[sub_resource type="Animation" id="Animation_0xon7"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Brik:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Brik2:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Brik3:modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Brik4:modulate")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Brik5:modulate")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Brik6:modulate")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("Brik7:modulate")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_000g8"]
-resource_name = "secret3"
-length = 0.4
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Brik:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Brik2:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Brik3:modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Brik4:modulate")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Brik5:modulate")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Brik6:modulate")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("Brik7:modulate")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_hf63c"]
-_data = {
-"RESET": SubResource("Animation_0xon7"),
-"secret3": SubResource("Animation_000g8")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rkyxj"]
@@ -751,108 +357,8 @@ size = Vector2(68, 17)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ah1wq"]
 size = Vector2(68, 20)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_k5ltm"]
-size = Vector2(544.5, 20)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_nltpp"]
-size = Vector2(68, 12)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7vdvk"]
-size = Vector2(34, 2)
-
-[sub_resource type="Animation" id="Animation_dbhra"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../bars2:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(323, 563)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("gun_trap1:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(967, 685)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("gun_trap2:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(388, 731)]
-}
-
-[sub_resource type="Animation" id="Animation_8f4i7"]
-resource_name = "presure_button1"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("gun_trap1:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(967, 685), Vector2(1003, 395)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("gun_trap2:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(388, 731), Vector2(391, 428)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("../bars2:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(323, 563), Vector2(323, 529)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_n87wg"]
-_data = {
-"RESET": SubResource("Animation_dbhra"),
-"presure_button1": SubResource("Animation_8f4i7")
-}
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_x4472"]
-size = Vector2(22, 34)
-
 [node name="MainScene" type="Node2D"]
 script = ExtResource("1_g02kd")
-
-[node name="Wall2" type="Sprite2D" parent="."]
-position = Vector2(579, 324)
-texture = ExtResource("2_wq35n")
 
 [node name="TileMap" type="TileMap" parent="."]
 format = 2
@@ -1599,189 +1105,6 @@ position = Vector2(1071, 597)
 [node name="brik242" parent="TileMap" instance=ExtResource("3_rb7aj")]
 position = Vector2(1105, 597)
 
-[node name="brik243" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(51, 359)
-
-[node name="brik244" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(85, 359)
-
-[node name="brik245" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(119, 359)
-
-[node name="brik246" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(153, 359)
-
-[node name="brik247" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(255, 359)
-
-[node name="brik248" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(289, 359)
-
-[node name="brik249" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(323, 359)
-
-[node name="brik250" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(357, 359)
-
-[node name="brik251" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(391, 359)
-
-[node name="brik252" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(425, 359)
-
-[node name="brik253" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(119, 427)
-
-[node name="brik254" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(119, 393)
-
-[node name="brik255" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(119, 461)
-
-[node name="brik256" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(119, 495)
-
-[node name="brik257" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(153, 495)
-
-[node name="brik258" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(187, 495)
-
-[node name="brik259" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(221, 495)
-
-[node name="bars" parent="TileMap" instance=ExtResource("4_h2jud")]
-position = Vector2(221, 563)
-
-[node name="brik260" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(221, 529)
-
-[node name="brik261" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(221, 393)
-
-[node name="brik262" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(221, 427)
-
-[node name="brik263" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(425, 529)
-
-[node name="bars2" parent="TileMap" instance=ExtResource("4_h2jud")]
-position = Vector2(323, 563)
-
-[node name="brik264" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(323, 529)
-
-[node name="brik265" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(357, 529)
-
-[node name="brik266" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(391, 529)
-
-[node name="brik267" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(459, 529)
-
-[node name="brik268" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(493, 529)
-
-[node name="brik269" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(527, 529)
-
-[node name="brik270" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(561, 529)
-
-[node name="brik271" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(595, 529)
-
-[node name="brik272" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(629, 529)
-
-[node name="brik273" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(663, 529)
-
-[node name="brik274" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(697, 529)
-
-[node name="brik275" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(731, 529)
-
-[node name="brik276" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(765, 529)
-
-[node name="brik277" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(799, 529)
-
-[node name="brik278" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(833, 529)
-
-[node name="brik279" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(867, 529)
-
-[node name="brik280" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(901, 529)
-
-[node name="brik281" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(935, 529)
-
-[node name="brik282" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(969, 529)
-
-[node name="brik283" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(1003, 529)
-
-[node name="brik284" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(1037, 529)
-
-[node name="brik285" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(1071, 529)
-
-[node name="brik286" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(1105, 529)
-
-[node name="brik287" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(357, 495)
-
-[node name="brik288" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(357, 461)
-
-[node name="brik289" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(357, 427)
-
-[node name="brik290" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(459, 495)
-
-[node name="brik291" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(595, 495)
-
-[node name="brik292" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(595, 461)
-
-[node name="brik293" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(731, 495)
-
-[node name="brik294" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(867, 495)
-
-[node name="brik295" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(867, 461)
-
-[node name="brik296" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(935, 495)
-
-[node name="brik297" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(1037, 495)
-
-[node name="brik298" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(1037, 461)
-
-[node name="brik299" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(1037, 393)
-
-[node name="brik300" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(1071, 393)
-
-[node name="brik301" parent="TileMap" instance=ExtResource("3_rb7aj")]
-position = Vector2(1105, 393)
-
 [node name="trigger_animation1" type="Node2D" parent="TileMap"]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="TileMap/trigger_animation1"]
@@ -1870,109 +1193,28 @@ shape = SubResource("RectangleShape2D_hh8v8")
 
 [node name="trigger_animation5" type="Node2D" parent="TileMap"]
 
+[node name="WrongButton1" type="Sprite2D" parent="TileMap/trigger_animation5"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(153, 563)
+texture = ExtResource("5_eluwh")
+
+[node name="WrongButton2" type="Sprite2D" parent="TileMap/trigger_animation5"]
+position = Vector2(153, 563)
+texture = ExtResource("6_i04dk")
+
 [node name="trigger5" type="Area2D" parent="TileMap/trigger_animation5"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/trigger_animation5/trigger5"]
 position = Vector2(153, 578.5)
 shape = SubResource("RectangleShape2D_ovglh")
 
-[node name="WrongButton1" type="Sprite2D" parent="TileMap/trigger_animation5/trigger5"]
-position = Vector2(153, 563)
-texture = ExtResource("5_eluwh")
-
-[node name="WrongButton2" type="Sprite2D" parent="TileMap/trigger_animation5/trigger5"]
-position = Vector2(153, 563)
-texture = ExtResource("6_i04dk")
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="TileMap/trigger_animation5"]
 libraries = {
 "": SubResource("AnimationLibrary_dufvj")
 }
 
-[node name="trigger_animation6" type="Node2D" parent="TileMap"]
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="TileMap/trigger_animation6"]
-libraries = {
-"": SubResource("AnimationLibrary_mgaf5")
-}
-
-[node name="Brik" type="Sprite2D" parent="TileMap/trigger_animation6"]
-position = Vector2(153, 393)
-texture = ExtResource("7_cms4b")
-
-[node name="Brik2" type="Sprite2D" parent="TileMap/trigger_animation6"]
-position = Vector2(187, 393)
-texture = ExtResource("7_cms4b")
-
-[node name="Brik3" type="Sprite2D" parent="TileMap/trigger_animation6"]
-position = Vector2(153, 427)
-texture = ExtResource("7_cms4b")
-
-[node name="Brik4" type="Sprite2D" parent="TileMap/trigger_animation6"]
-position = Vector2(187, 427)
-texture = ExtResource("7_cms4b")
-
-[node name="Brik5" type="Sprite2D" parent="TileMap/trigger_animation6"]
-position = Vector2(153, 461)
-texture = ExtResource("7_cms4b")
-
-[node name="Brik6" type="Sprite2D" parent="TileMap/trigger_animation6"]
-position = Vector2(187, 461)
-texture = ExtResource("7_cms4b")
-
-[node name="Brik7" type="Sprite2D" parent="TileMap/trigger_animation6"]
-position = Vector2(221, 461)
-texture = ExtResource("7_cms4b")
-
-[node name="trigger6" type="Area2D" parent="TileMap/trigger_animation6"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/trigger_animation6/trigger6"]
-position = Vector2(232.5, 461)
-shape = SubResource("RectangleShape2D_i22q6")
-
-[node name="trigger_animation7" type="Node2D" parent="TileMap"]
-
-[node name="Brik" type="Sprite2D" parent="TileMap/trigger_animation7"]
-position = Vector2(1037, 427)
-texture = ExtResource("7_cms4b")
-
-[node name="Brik2" type="Sprite2D" parent="TileMap/trigger_animation7"]
-position = Vector2(1071, 427)
-texture = ExtResource("7_cms4b")
-
-[node name="Brik3" type="Sprite2D" parent="TileMap/trigger_animation7"]
-position = Vector2(1105, 427)
-texture = ExtResource("7_cms4b")
-
-[node name="Brik4" type="Sprite2D" parent="TileMap/trigger_animation7"]
-position = Vector2(1071, 461)
-texture = ExtResource("7_cms4b")
-
-[node name="Brik5" type="Sprite2D" parent="TileMap/trigger_animation7"]
-position = Vector2(1105, 461)
-texture = ExtResource("7_cms4b")
-
-[node name="Brik6" type="Sprite2D" parent="TileMap/trigger_animation7"]
-position = Vector2(1071, 495)
-texture = ExtResource("7_cms4b")
-
-[node name="Brik7" type="Sprite2D" parent="TileMap/trigger_animation7"]
-position = Vector2(1105, 495)
-texture = ExtResource("7_cms4b")
-
-[node name="trigger7" type="Area2D" parent="TileMap/trigger_animation7"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/trigger_animation7/trigger7"]
-position = Vector2(1025.5, 427)
-shape = SubResource("RectangleShape2D_7mllt")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="TileMap/trigger_animation7"]
-libraries = {
-"": SubResource("AnimationLibrary_hf63c")
-}
-
 [node name="Player" parent="TileMap" instance=ExtResource("1_n4cte")]
-position = Vector2(972, 562)
+position = Vector2(76, 537)
 
 [node name="lava_case" type="Node2D" parent="TileMap"]
 
@@ -2012,48 +1254,6 @@ position = Vector2(765, 223)
 [node name="lava12" parent="TileMap/lava_case" instance=ExtResource("7_euxta")]
 position = Vector2(799, 223)
 
-[node name="lava13" parent="TileMap/lava_case" instance=ExtResource("7_euxta")]
-position = Vector2(391, 495)
-
-[node name="lava14" parent="TileMap/lava_case" instance=ExtResource("7_euxta")]
-position = Vector2(425, 495)
-
-[node name="lava15" parent="TileMap/lava_case" instance=ExtResource("7_euxta")]
-position = Vector2(493, 495)
-
-[node name="lava16" parent="TileMap/lava_case" instance=ExtResource("7_euxta")]
-position = Vector2(527, 495)
-
-[node name="lava17" parent="TileMap/lava_case" instance=ExtResource("7_euxta")]
-position = Vector2(561, 495)
-
-[node name="lava18" parent="TileMap/lava_case" instance=ExtResource("7_euxta")]
-position = Vector2(629, 495)
-
-[node name="lava19" parent="TileMap/lava_case" instance=ExtResource("7_euxta")]
-position = Vector2(663, 495)
-
-[node name="lava20" parent="TileMap/lava_case" instance=ExtResource("7_euxta")]
-position = Vector2(697, 495)
-
-[node name="lava21" parent="TileMap/lava_case" instance=ExtResource("7_euxta")]
-position = Vector2(765, 495)
-
-[node name="lava22" parent="TileMap/lava_case" instance=ExtResource("7_euxta")]
-position = Vector2(799, 495)
-
-[node name="lava23" parent="TileMap/lava_case" instance=ExtResource("7_euxta")]
-position = Vector2(833, 495)
-
-[node name="lava24" parent="TileMap/lava_case" instance=ExtResource("7_euxta")]
-position = Vector2(901, 495)
-
-[node name="lava25" parent="TileMap/lava_case" instance=ExtResource("7_euxta")]
-position = Vector2(969, 495)
-
-[node name="lava26" parent="TileMap/lava_case" instance=ExtResource("7_euxta")]
-position = Vector2(1003, 495)
-
 [node name="Death_trigger" type="Node2D" parent="TileMap"]
 
 [node name="trigger" type="Area2D" parent="TileMap/Death_trigger"]
@@ -2078,53 +1278,6 @@ shape = SubResource("RectangleShape2D_iwchk")
 position = Vector2(646, 230)
 shape = SubResource("RectangleShape2D_ah1wq")
 
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="TileMap/Death_trigger/trigger"]
-position = Vector2(645.75, 502)
-shape = SubResource("RectangleShape2D_k5ltm")
-
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="TileMap/Death_trigger/trigger"]
-position = Vector2(986, 506)
-shape = SubResource("RectangleShape2D_nltpp")
-
-[node name="trigger_animation8" type="Node2D" parent="TileMap"]
-
-[node name="gun_trap1" parent="TileMap/trigger_animation8" instance=ExtResource("11_grfpn")]
-position = Vector2(967, 685)
-
-[node name="gun_trap2" parent="TileMap/trigger_animation8" instance=ExtResource("11_grfpn")]
-position = Vector2(388, 731)
-rotation = 3.14159
-
-[node name="WrongButton1" type="Sprite2D" parent="TileMap/trigger_animation8"]
-position = Vector2(1105, 359)
-texture = ExtResource("5_eluwh")
-
-[node name="WrongButton2" type="Sprite2D" parent="TileMap/trigger_animation8"]
-position = Vector2(1105, 359)
-texture = ExtResource("6_i04dk")
-
-[node name="trigger8" type="Area2D" parent="TileMap/trigger_animation8"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/trigger_animation8/trigger8"]
-position = Vector2(1105, 375)
-shape = SubResource("RectangleShape2D_7vdvk")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="TileMap/trigger_animation8"]
-libraries = {
-"": SubResource("AnimationLibrary_n87wg")
-}
-
-[node name="trigger_animation9" type="Node2D" parent="TileMap"]
-
-[node name="Portal1" parent="TileMap/trigger_animation9" instance=ExtResource("2_owhot")]
-position = Vector2(1105, 563)
-
-[node name="trigger9" type="Area2D" parent="TileMap/trigger_animation9"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/trigger_animation9/trigger9"]
-position = Vector2(1111, 563)
-shape = SubResource("RectangleShape2D_x4472")
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 visible = false
 
@@ -2135,8 +1288,4 @@ visible = false
 [connection signal="body_entered" from="TileMap/trigger_animation3/trigger3" to="." method="_on_trigger_3_body_entered"]
 [connection signal="body_entered" from="TileMap/trigger_animation4/trigger4" to="." method="_on_trigger_4_body_entered"]
 [connection signal="body_entered" from="TileMap/trigger_animation5/trigger5" to="." method="_on_trigger_5_body_entered"]
-[connection signal="body_exited" from="TileMap/trigger_animation6/trigger6" to="." method="_on_trigger_6_body_exited"]
-[connection signal="body_entered" from="TileMap/trigger_animation7/trigger7" to="." method="_on_trigger_7_body_entered"]
 [connection signal="body_entered" from="TileMap/Death_trigger/trigger" to="." method="_on_trigger_body_entered"]
-[connection signal="body_entered" from="TileMap/trigger_animation8/trigger8" to="." method="_on_trigger_8_body_entered"]
-[connection signal="body_entered" from="TileMap/trigger_animation9/trigger9" to="." method="_on_trigger_9_body_entered"]

@@ -1,0 +1,508 @@
+[gd_scene load_steps=4 format=3 uid="uid://bw07sa2nnsu2w"]
+
+[ext_resource type="Texture2D" uid="uid://qya6yuimnqrb" path="res://sprites/Wall1.png" id="1_ecgvq"]
+[ext_resource type="PackedScene" uid="uid://c6pg2n2b5w0bl" path="res://tscn/brik.tscn" id="2_cbjdr"]
+[ext_resource type="PackedScene" uid="uid://dj8ra1ehnroa3" path="res://tscn/player.tscn" id="3_bxu74"]
+
+[node name="finish" type="Node2D"]
+
+[node name="Wall1" type="Sprite2D" parent="."]
+position = Vector2(579, 316.5)
+scale = Vector2(33.8824, 19.3235)
+texture = ExtResource("1_ecgvq")
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 2
+
+[node name="brik" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(17, 631)
+
+[node name="brik2" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(51, 631)
+
+[node name="brik3" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(85, 631)
+
+[node name="brik4" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(119, 631)
+
+[node name="brik5" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(153, 631)
+
+[node name="brik6" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(187, 631)
+
+[node name="brik7" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(221, 631)
+
+[node name="brik8" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(255, 631)
+
+[node name="brik9" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(289, 631)
+
+[node name="brik10" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(323, 631)
+
+[node name="brik11" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(357, 631)
+
+[node name="brik12" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(391, 631)
+
+[node name="brik13" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(425, 631)
+
+[node name="brik14" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(459, 631)
+
+[node name="brik15" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(493, 631)
+
+[node name="brik16" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(527, 631)
+
+[node name="brik17" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(561, 631)
+
+[node name="brik18" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(595, 631)
+
+[node name="brik19" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(629, 631)
+
+[node name="brik20" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(663, 631)
+
+[node name="brik21" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(697, 631)
+
+[node name="brik22" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(731, 631)
+
+[node name="brik23" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(765, 631)
+
+[node name="brik24" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(799, 631)
+
+[node name="brik25" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(833, 631)
+
+[node name="brik26" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(867, 631)
+
+[node name="brik27" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(901, 631)
+
+[node name="brik28" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(935, 631)
+
+[node name="brik29" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(969, 631)
+
+[node name="brik30" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(1003, 631)
+
+[node name="brik31" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(1037, 631)
+
+[node name="brik32" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(1071, 631)
+
+[node name="brik33" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(1105, 631)
+
+[node name="brik34" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(1139, 631)
+
+[node name="brik35" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(1139, 597)
+
+[node name="brik36" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(1139, 563)
+
+[node name="brik37" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(17, 597)
+
+[node name="brik38" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(17, 563)
+
+[node name="brik39" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(17, 529)
+
+[node name="brik40" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(17, 495)
+
+[node name="brik41" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(17, 461)
+
+[node name="brik42" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(17, 427)
+
+[node name="brik43" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(17, 393)
+
+[node name="brik44" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(17, 359)
+
+[node name="brik45" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(17, 325)
+
+[node name="brik46" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(17, 291)
+
+[node name="brik47" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(17, 257)
+
+[node name="brik48" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(17, 223)
+
+[node name="brik49" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(17, 189)
+
+[node name="brik50" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(17, 155)
+
+[node name="brik51" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(17, 121)
+
+[node name="brik52" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(17, 87)
+
+[node name="brik53" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(17, 53)
+
+[node name="brik54" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(17, 19)
+
+[node name="brik55" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(17, -15)
+
+[node name="brik56" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(1139, 529)
+
+[node name="brik57" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(1139, 495)
+
+[node name="brik58" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(1139, 461)
+
+[node name="brik59" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(1139, 427)
+
+[node name="brik60" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(1139, 393)
+
+[node name="brik61" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(1139, 359)
+
+[node name="brik62" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(1139, 325)
+
+[node name="brik63" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(1139, 291)
+
+[node name="brik64" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(1139, 257)
+
+[node name="brik65" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(1139, 223)
+
+[node name="brik66" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(1139, 189)
+
+[node name="brik67" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(1139, 155)
+
+[node name="brik68" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(1139, 121)
+
+[node name="brik69" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(1139, 87)
+
+[node name="brik70" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(1139, 53)
+
+[node name="brik71" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(1139, 19)
+
+[node name="brik72" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(1139, -15)
+
+[node name="brik73" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(51, 597)
+
+[node name="brik74" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(85, 597)
+
+[node name="brik75" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(119, 597)
+
+[node name="brik76" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(51, 563)
+
+[node name="brik77" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(51, 529)
+
+[node name="brik78" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(51, 495)
+
+[node name="brik79" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(85, 529)
+
+[node name="brik80" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(85, 563)
+
+[node name="brik81" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(119, 563)
+
+[node name="brik82" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(153, 597)
+
+[node name="brik83" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(51, 461)
+
+[node name="brik84" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(85, 495)
+
+[node name="brik85" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(119, 529)
+
+[node name="brik86" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(153, 563)
+
+[node name="brik87" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(187, 597)
+
+[node name="brik88" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(1105, 597)
+
+[node name="brik89" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(1071, 597)
+
+[node name="brik90" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(1037, 597)
+
+[node name="brik91" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(1003, 597)
+
+[node name="brik92" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(969, 597)
+
+[node name="brik93" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(1105, 563)
+
+[node name="brik94" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(1105, 529)
+
+[node name="brik95" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(1105, 495)
+
+[node name="brik96" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(1105, 461)
+
+[node name="brik97" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(1071, 495)
+
+[node name="brik98" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(1071, 529)
+
+[node name="brik99" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(1071, 563)
+
+[node name="brik100" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(1037, 529)
+
+[node name="brik101" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(1037, 563)
+
+[node name="brik102" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(1003, 563)
+
+[node name="brik103" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(561, 597)
+
+[node name="brik104" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(595, 597)
+
+[node name="brik105" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(561, 563)
+
+[node name="brik106" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(595, 563)
+
+[node name="brik107" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(527, 563)
+
+[node name="brik108" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(493, 563)
+
+[node name="brik109" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(629, 563)
+
+[node name="brik110" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(663, 563)
+
+[node name="brik111" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(459, 529)
+
+[node name="brik112" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(697, 529)
+
+[node name="brik113" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(493, 529)
+
+[node name="brik114" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(493, 427)
+
+[node name="brik115" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(561, 529)
+
+[node name="brik116" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(595, 529)
+
+[node name="brik117" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(833, 393)
+
+[node name="brik118" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(663, 529)
+
+[node name="brik119" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(459, 495)
+
+[node name="brik120" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(289, 393)
+
+[node name="brik121" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(255, 325)
+
+[node name="brik122" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(561, 495)
+
+[node name="brik123" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(595, 495)
+
+[node name="brik124" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(833, 359)
+
+[node name="brik125" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(867, 359)
+
+[node name="brik126" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(697, 495)
+
+[node name="brik127" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(731, 495)
+
+[node name="brik128" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(425, 495)
+
+[node name="brik129" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(425, 563)
+
+[node name="brik130" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(425, 597)
+
+[node name="brik131" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(425, 529)
+
+[node name="brik132" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(731, 529)
+
+[node name="brik133" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(731, 563)
+
+[node name="brik134" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(731, 597)
+
+[node name="brik135" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(425, 461)
+
+[node name="brik136" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(391, 461)
+
+[node name="brik137" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(289, 359)
+
+[node name="brik138" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(323, 359)
+
+[node name="brik139" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(527, 461)
+
+[node name="brik140" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(561, 461)
+
+[node name="brik141" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(595, 461)
+
+[node name="brik142" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(629, 461)
+
+[node name="brik143" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(901, 325)
+
+[node name="brik144" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(901, 359)
+
+[node name="brik145" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(731, 461)
+
+[node name="brik146" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(765, 461)
+
+[node name="brik147" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(799, 427)
+
+[node name="brik148" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(391, 427)
+
+[node name="brik149" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(357, 427)
+
+[node name="brik150" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(357, 393)
+
+[node name="brik151" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(323, 393)
+
+[node name="brik152" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(255, 359)
+
+[node name="brik153" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(527, 427)
+
+[node name="brik154" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(561, 427)
+
+[node name="brik155" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(595, 427)
+
+[node name="brik156" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(629, 427)
+
+[node name="brik157" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(663, 427)
+
+[node name="brik158" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(867, 393)
+
+[node name="brik159" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(799, 393)
+
+[node name="brik160" parent="TileMap" instance=ExtResource("2_cbjdr")]
+position = Vector2(765, 427)
+
+[node name="TextEdit" type="TextEdit" parent="TileMap"]
+offset_left = 362.0
+offset_top = 78.0
+offset_right = 822.0
+offset_bottom = 274.0
+text = "
+
+                                                    YOU
+													WIN"
+
+[node name="Player" parent="." instance=ExtResource("3_bxu74")]
+position = Vector2(580, 377)
