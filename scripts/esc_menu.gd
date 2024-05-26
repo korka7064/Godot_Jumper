@@ -28,7 +28,7 @@ func _on_restart_pressed():
 
 
 func _on_exit_to_menu_pressed():
-	get_tree().change_scene_to_file("res://tscn/menu.tscn")
+	get_tree().change_scene_to_file("res://tscn/options.tscn")
 
 
 func _on_exit_to_dectop_pressed():

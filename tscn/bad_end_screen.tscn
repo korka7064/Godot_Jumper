@@ -13,10 +13,10 @@ script = ExtResource("1_bj6la")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 460.0
-offset_top = 483.0
-offset_right = 797.0
-offset_bottom = 539.0
+offset_left = 405.0
+offset_top = 482.0
+offset_right = 747.0
+offset_bottom = 538.0
 
 [node name="return" type="Button" parent="HBoxContainer"]
 layout_mode = 2

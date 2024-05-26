@@ -10,10 +10,16 @@ config_version=5
 
 [application]
 
-config/name="Новый Игровой Проект"
+config/name="Godot Jumper"
+config/version="0.0.10"
 run/main_scene="res://tscn/menu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://sprites/player2.1.png"
+
+[display]
+
+mouse_cursor/custom_image="res://sprites/tmp/cursor1.png"
+mouse_cursor/custom_image_hotspot=Vector2(3, 3)
 
 [input]
 

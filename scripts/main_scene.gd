@@ -5,6 +5,9 @@ var con2 = 0
 var con3 = 0
 var con4 = 0
 var con5 = 0
+var con6 = 0
+var con7 = 0
+var con8 = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$TileMap/trigger_animation1/AnimationPlayer.play("RESET")
@@ -55,3 +58,21 @@ func _on_trigger_body_entered(body):
 	if body.name == "Player":
 		get_tree().change_scene_to_file("res://tscn/bad_end_screen.tscn")
 
+
+
+func _on_coin_body_entered(body):
+	if body.name == "Player" and con6 == 0:
+		$TileMap/Coins/animCoin1.play("coin1")
+		con6 = 1
+
+
+func _on_coin_1_body_entered(body):
+	if body.name == "Player" and con7 == 0:
+		$TileMap/Coins/animCoin2.play("coin2")
+		con7 = 1
+
+
+func _on_coin_2_body_entered(body):
+	if body.name == "Player" and con8 == 0:
+		$TileMap/Coins/animCoin3.play("coin3")
+		con8 = 1

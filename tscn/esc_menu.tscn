@@ -115,11 +115,11 @@ offset_top = -3.0
 offset_right = 136.0
 offset_bottom = 33.0
 focus_neighbor_top = NodePath("../Resume")
-focus_neighbor_bottom = NodePath("../Exit_to_menu")
+focus_neighbor_bottom = NodePath("../Options")
 theme = ExtResource("4_sek3k")
 text = "Restart"
 
-[node name="Exit_to_menu" type="Button" parent="Menu2"]
+[node name="Options" type="Button" parent="Menu2"]
 offset_left = -89.0
 offset_top = 72.0
 offset_right = 135.0
@@ -127,14 +127,14 @@ offset_bottom = 108.0
 focus_neighbor_top = NodePath("../Restart")
 focus_neighbor_bottom = NodePath("../Exit_to_dectop")
 theme = ExtResource("4_sek3k")
-text = "Exit to menu"
+text = "Options"
 
 [node name="Exit_to_dectop" type="Button" parent="Menu2"]
 offset_left = -89.0
 offset_top = 149.0
 offset_right = 134.0
 offset_bottom = 182.0
-focus_neighbor_top = NodePath("../Exit_to_menu")
+focus_neighbor_top = NodePath("../Options")
 focus_neighbor_bottom = NodePath("../Resume")
 theme = ExtResource("4_sek3k")
 text = "Exit ot desctop"
@@ -146,5 +146,5 @@ libraries = {
 
 [connection signal="pressed" from="Menu2/Resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="Menu2/Restart" to="." method="_on_restart_pressed"]
-[connection signal="pressed" from="Menu2/Exit_to_menu" to="." method="_on_exit_to_menu_pressed"]
+[connection signal="pressed" from="Menu2/Options" to="." method="_on_exit_to_menu_pressed"]
 [connection signal="pressed" from="Menu2/Exit_to_dectop" to="." method="_on_exit_to_dectop_pressed"]
