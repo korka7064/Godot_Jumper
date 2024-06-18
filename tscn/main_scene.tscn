@@ -2199,7 +2199,7 @@ position = Vector2(1111, 563)
 shape = SubResource("RectangleShape2D_x4472")
 
 [node name="Player" parent="TileMap" instance=ExtResource("1_n4cte")]
-position = Vector2(68, -106)
+position = Vector2(66, -100)
 
 [node name="lava_case" type="Node2D" parent="TileMap"]
 

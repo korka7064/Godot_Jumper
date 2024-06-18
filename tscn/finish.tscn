@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bw07sa2nnsu2w"]
+[gd_scene load_steps=5 format=3 uid="uid://bw07sa2nnsu2w"]
 
 [ext_resource type="Texture2D" uid="uid://qya6yuimnqrb" path="res://sprites/Wall1.png" id="1_ecgvq"]
 [ext_resource type="PackedScene" uid="uid://c6pg2n2b5w0bl" path="res://tscn/brik.tscn" id="2_cbjdr"]
+[ext_resource type="FontFile" uid="uid://bqo71dyw8jr8r" path="res://shaders/arcadeclassic.regular.ttf" id="3_80yrl"]
 [ext_resource type="PackedScene" uid="uid://dj8ra1ehnroa3" path="res://tscn/player.tscn" id="3_bxu74"]
 
 [node name="finish" type="Node2D"]
@@ -494,15 +495,14 @@ position = Vector2(799, 393)
 [node name="brik160" parent="TileMap" instance=ExtResource("2_cbjdr")]
 position = Vector2(765, 427)
 
-[node name="TextEdit" type="TextEdit" parent="TileMap"]
-offset_left = 362.0
-offset_top = 78.0
-offset_right = 822.0
-offset_bottom = 274.0
-text = "
-
-                                                    YOU
-													WIN"
+[node name="Label" type="Label" parent="TileMap"]
+offset_left = 567.0
+offset_top = 319.0
+offset_right = 603.0
+offset_bottom = 357.0
+theme_override_fonts/font = ExtResource("3_80yrl")
+text = "YOU
+WIN"
 
 [node name="Player" parent="." instance=ExtResource("3_bxu74")]
 position = Vector2(580, 377)
